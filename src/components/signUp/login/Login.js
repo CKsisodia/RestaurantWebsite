@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import {
   forgotPasswordAction,
+  getUserDataAction,
   logInUserAction,
 } from "../../../reducer/asyncUserReducer";
 import "./Login.css";
@@ -21,7 +22,7 @@ const Login = () => {
 
   useEffect(() => {
     if (userLogInData !== undefined) {
-      navigate("/");
+      navigate("/profileForm");
     }
   }, [userLogInData]);
 

@@ -31,6 +31,7 @@ export default function RestaurantAppBar() {
   const userProfileData = useSelector((state) => state.user.userProfileData);
   const cartItemsShow = useSelector((state) => state.restaurant.cartItems);
 
+  console.log("ghkgkjad", userProfileData);
   const [userName, setUserName] = React.useState("");
 
   React.useEffect(() => {
@@ -211,7 +212,7 @@ export default function RestaurantAppBar() {
                 marginTop: "12px",
               }}
             >
-              {userProfileData !== undefined && "Welcome " + userName}
+              {userProfileData && "Welcome " + userName}
             </div>
 
             {!userProfileData && (

@@ -20,17 +20,15 @@ const ProfileForm = () => {
     setEnteredPhotoUrl(event.target.value);
   };
 
-
   const getUserData = () => {
     setTimeout(() => {
-      dispatch(getUserDataAction())
-    },1000)
-  }
+      dispatch(getUserDataAction());
+    }, 1000);
+  };
 
   const updateButtonHandler = (event) => {
     event.preventDefault();
 
-    
     dispatch(
       updateUserProfileAction({
         userName: enteredUserName,
@@ -38,14 +36,11 @@ const ProfileForm = () => {
       })
     );
 
-
     setEnteredUserName("");
     setEnteredPhotoUrl("");
     getUserData();
-    navigate("/userprofileshow");
-
+    navigate("/");
   };
-  
 
   const cancelButtonHandler = () => {
     navigate("/");
